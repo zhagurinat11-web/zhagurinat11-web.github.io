@@ -22,19 +22,19 @@
 <title>Татьяна, методолог финансовых продуктов</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500&display=swap&subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;800&display=swap&subset=cyrillic" rel="stylesheet">
 <style>
 :root{--bg:#F6F8FC;--ink:#1E2A4A;--pink:#BFE3EE;--red:#C4D4F3;--blue:#4A62A6;--green:#2F4380;
---d:'Unbounded','Arial Black',Arial,sans-serif;--b:'Onest','Segoe UI',Arial,sans-serif;
+--d:'Onest','Segoe UI',Arial,sans-serif;--b:'Onest','Segoe UI',Arial,sans-serif;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");color:var(--ink);font:400 18px/1.55 var(--b);overflow-x:hidden;position:relative}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.55 var(--b);overflow-x:hidden;position:relative}
 
 section{position:relative;padding:72px 24px;max-width:1040px;margin:0 auto}
-h1,h2,.num{font-family:var(--d);font-weight:500;line-height:1.08;margin:0}
-h1{font-size:clamp(27px,6.8vw,50px);letter-spacing:-.015em;max-width:20ch}
-h2{font-size:clamp(26px,6vw,44px);letter-spacing:-.01em;max-width:18ch}
+h1,h2,.num{font-family:var(--d);font-weight:800;line-height:1.08;margin:0}
+h1{font-size:clamp(27px,6.8vw,50px);letter-spacing:-.025em;max-width:20ch}
+h2{font-size:clamp(26px,6vw,44px);letter-spacing:-.02em;max-width:18ch}
 p{margin:0}
 .btn{display:inline-block;font:600 17px/1 var(--b);padding:18px 30px;border-radius:0;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s}
 .btn.fill{background:var(--ink);color:var(--bg)}
@@ -108,7 +108,7 @@ footer{height:96px}
 html,body{overflow-x:hidden;max-width:100%}
 
 @media(max-width:819px){
-.hero{padding-top:20px;gap:14px;padding-bottom:28px}
+.hero{padding-top:26px;gap:14px;padding-bottom:28px}
 .eyebrow{font-size:16px;margin-bottom:8px}
 h1{font-size:clamp(25px,6.6vw,34px);line-height:1.1}
 .lead{font-size:18px;line-height:1.35;margin:10px 0 16px}
@@ -119,7 +119,7 @@ h1{font-size:clamp(25px,6.6vw,34px);line-height:1.1}
 
 .hero{min-height:100vh;min-height:100svh}
 @media(max-width:819px){
-.hero{display:flex;flex-direction:column;justify-content:flex-start;padding-top:18px;padding-bottom:16px;gap:10px}
+.hero{display:flex;flex-direction:column;justify-content:flex-start;padding-top:26px;padding-bottom:16px;gap:10px}
 .hero>.in:first-of-type{flex:none}
 .ph{flex:1 1 auto;min-height:0;width:100%;max-width:none;display:flex;align-items:center;justify-content:center}
 .ph svg{width:auto;height:100%;max-height:100%;max-width:100%}
@@ -128,6 +128,19 @@ h1{font-size:clamp(25px,6.6vw,34px);line-height:1.1}
 
 @media(min-width:600px) and (max-width:819px){.ph svg{max-width:420px}}
 @media(min-width:820px){.ph svg{max-height:calc(100svh - 80px)}}
+
+/* лента вместо квадрата */
+.hero>.band{position:absolute;flex:none;margin:0;z-index:0;left:0;top:0;width:min(46vw,480px);height:92px;background:#DCE6F8;border-bottom:1px solid #1E2A4A;pointer-events:none}
+.band::after{content:'';position:absolute;left:0;bottom:-8px;width:34%;height:6px;background:#5B73B8}
+@media(max-width:819px){.hero>.band{width:62vw;height:14px;border-bottom:0;margin:0}.hero{margin-top:0}.band::after{display:none}}
+#numbers{overflow:hidden}
+.contact{max-width:none;overflow:hidden;padding-left:24px;padding-right:24px}
+.contact>.in{max-width:1040px;margin:0 auto}
+.cshape{right:0;bottom:0;width:min(34vw,220px);height:min(34vw,220px);opacity:.9}
+@media(max-width:819px){.cshape{width:120px;height:120px}.contact{padding-bottom:150px}}
+@media(max-width:819px) and (max-height:700px){.hero{padding-top:22px}.eyebrow{font-size:14px;margin-bottom:6px}h1{font-size:clamp(22px,6vw,28px)}.lead{font-size:16px;margin:8px 0 12px}.hero .btn{min-height:44px;padding:12px 20px}.ph svg{max-height:100%}}
+@media(max-width:599px){.hero{height:100svh;min-height:0}.ph{overflow:hidden}.ph svg{height:100%;width:auto;max-width:100%}}
+@media(max-width:599px) and (min-height:900px){.hero{height:auto;min-height:100svh}}
 </style>
 </head>
 <body>
@@ -135,7 +148,7 @@ h1{font-size:clamp(25px,6.6vw,34px);line-height:1.1}
 <a class="btn fill tg sticky off" id="cta" href="https://t.me/TatyanaZH1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 3.5 2.8 10.7l6.2 2.3 2.3 6.2 3.2-4.4 4.9 3.6z"/><path d="M9 13 21.5 3.5"/></svg>Обсудить задачу в Telegram</a>
 
 <section class="hero" id="top">
-  <svg class="shape" style="left:-150px;top:-120px;width:300px;height:300px" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#DCE6F8"/></svg>
+  <div class="band" aria-hidden="true"></div>
   <div class="in">
     <p class="eyebrow">Татьяна, методолог финансовых продуктов</p>
     <h1>Финансовые модели и автоматизация отчётности для бизнеса</h1>
@@ -205,7 +218,7 @@ h1{font-size:clamp(25px,6.6vw,34px);line-height:1.1}
 </section>
 
 <section class="contact" id="contact">
-  <svg class="shape" style="right:-80px;bottom:-20px;width:280px;height:280px" viewBox="0 0 100 100" aria-hidden="true"><rect x="20" y="0" width="80" height="80" fill="#C4D4F3"/><rect x="0" y="20" width="80" height="80" fill="none" stroke="#5B73B8" stroke-width="3"/><path d="M0 8H100M0 14H100" stroke="#1E2A4A" stroke-width=".35"/></svg>
+  <svg class="shape cshape" viewBox="0 0 100 100" aria-hidden="true"><rect x="20" y="0" width="80" height="80" fill="#C4D4F3"/><rect x="0" y="20" width="80" height="80" fill="none" stroke="#5B73B8" stroke-width="3"/></svg>
   <div class="in">
     <h2>Давайте обсудим вашу задачу</h2>
     <p class="csub">Напишите коротко, что нужно посчитать или автоматизировать.</p>
